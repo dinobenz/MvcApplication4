@@ -1,0 +1,29 @@
+﻿@model MvcApplication4.Models.Student[]
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var student in Model)
+                    {
+                        <text>
+                        <tr>
+                            <td>@student.ID</td>
+                            <td>@student.Name</td>
+                        </tr>
+                        </text>
+                    }
+                }
+            </tbody>
+        </table>
+    </body>
+</html>
